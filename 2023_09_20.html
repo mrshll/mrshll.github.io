@@ -18,40 +18,36 @@
 <p>Went down a TodePond rabbit hole over a cup of tea (i.e. this <a href="https://www.youtube.com/live/L2U_Sd1qMJ4?si=Pz51u4cIf5HwwMk-&amp;t=2576">live talk</a>). Their energy and enthusiasm about spatial programming -- and their storytelling bringing us along the discovery journey -- was incredible. It was one of those mind expanding nights. I've been dealing in "spatial data" from the meteorology, satellite, and geospatial perspective for some time, but this concept of rule-based computation (like, say <a href="https://100r.co/site/orca.html">Orca</a>), explained in this way, had me scribbling down sparks of thoughts, not yet ideas, about how they could relate to forecasting dynamical systems and defining environments.</p>
 
 <p>Thank you, Lu!</p>
-</main><p style="color:#ccc"><em>Compiled 2024-04-09</em></p></div><footer>
-  <div class="footer-row">
-    <a href="feed.rss"> RSS </a>
+</main><p style="color:#ccc"><em>Compiled 2024-4-9</em></p></div><footer>
+  <div class='footer-row'>
+    <a href="feed.rss">
+      RSS
+    </a>
     <a href="https://github.com/mrshll">
-      <img src="media/github.png" style="height: 2rem" />
+      <img src="media/github.png" style="height: 2rem">
     </a>
     <a href="https://webring.xxiivv.com/#random">
-      <img
-        src="https://webring.xxiivv.com/icon.black.svg"
-        style="height: 2rem"
-      />
+      <img src="https://webring.xxiivv.com/icon.black.svg" style="height: 2rem">
     </a>
-    <div id="low-tech-webring">
-      <img
-        src="media/lowtechwebring.png"
-        style="height: 2rem; padding-bottom: 0.2rem"
-      />
+    <div id='low-tech-webring'>
+      <img src="media/lowtechwebring.png" style="height: 2rem; padding-bottom: .2rem">
       <table>
         <tbody>
           <tr>
             <td>
               <a href="https://the-system.eu.org/">←</a>
             </td>
-            <td style="text-align: center">
+            <td style="text-align:center;">
               <a href="https://the-system.eu.org/">The System</a>
             </td>
-            <td style="text-align: center">
-              <span style="font-size: small">
+            <td style="text-align:center;">
+              <span style="font-size:small;">
                 <a href="https://emreed.net/LowTech_Directory.html">
-                  <img width="80" src="https://emreed.net/LTW.bmp" />
+                  <img width="80" src="https://emreed.net/LTW.bmp">
                 </a>
               </span>
             </td>
-            <td style="text-align: center">
+            <td style="text-align:center;">
               <a href="https://whoishohokam.com/">Peter's Tech Project Page</a>
             </td>
             <td>
@@ -61,24 +57,25 @@
         </tbody>
       </table>
     </div>
-    <span>Marshall Moutenot © 2024</span>
+    <span>Marshall Moutenot © 2023</span>
   </div>
 
-  <div id="lightswitch">
-    <input type="checkbox" id="lightswitch-input" />
-    <label for="lightswitch-input"></label>
+  <div id='lightswitch'>
+    <input type='checkbox' id='lightswitch-input' />
+    <label for='lightswitch-input'></label>
   </div>
 
   <script>
-    const toggleSwitch = document.querySelector("#lightswitch input");
-    toggleSwitch.addEventListener("change", (e) => {
-      const theme = e.target.checked ? "dark" : "light";
-      localStorage.setItem("data-theme", theme);
-      document.documentElement.setAttribute("data-theme", theme);
+    const toggleSwitch = document.querySelector('#lightswitch input');
+    toggleSwitch.addEventListener('change', e => {
+      const theme = e.target.checked ? 'dark' : 'light';
+      localStorage.setItem('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', theme)
     });
-    const theme = localStorage.getItem("data-theme") || "dark";
-    document.querySelector("#lightswitch input").checked = theme == "dark";
-    document.documentElement.setAttribute("data-theme", theme);
+    const theme = localStorage.getItem('data-theme') || 'dark';
+    document.querySelector('#lightswitch input').checked = theme == 'dark';
+    document.documentElement.setAttribute('data-theme', theme)
   </script>
+
 </footer>
 </body></html>
