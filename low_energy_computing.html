@@ -1,0 +1,98 @@
+<!doctype html><html><head>
+  <meta name="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="author" content="Marshall Moutenot">
+  <meta name="keywords" content="Marshall Moutenot, mrshll, upstream tech, climate tech" />
+  <meta name="license" content="name=BY-NC-SA(4.0), url=https://creativecommons.org/licenses/by-nc-sa/4.0/" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://mastodon.social/@mrshll" rel="me">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Low-energy computing" />
+  <link rel="stylesheet" type="text/css" href="./links/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./links/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="./links/main.css">
+  <title>mrshll.com - Low-energy computing</title>
+</head>
+<body><div class="content"><header><nav><ul><li><mark><a href="index.html">mrshll.com</a></mark></li></ul><ul><li><a href="About.html">About</a></li><li><a href="Log.html">Log</a></li><li><a href="Projects.html">Projects</a></li><li><mark><a href="Wiki.html">Wiki</a></mark></li><li><a href="Writing.html">Writing</a></li></ul><ul><li><a href="evergreen.html">evergreen</a></li><li><a href="fam.html">fam</a></li><li><mark><a href="gizmos.html">gizmos</a></mark></li><li><a href="home.html">home</a></li><li><a href="links.html">links</a></li><li><a href="meteorology.html">meteorology</a></li><details><summary></summary><li><a href="recipes.html">recipes</a></li><li><a href="to_consume.html">to consume</a></li><li><a href="toil.html">toil</a></li><li><a href="visuals.html">visuals</a></li></details></ul><ul><li><a href="binaries_and_scripts.html">Binaries and scripts</a></li><li><a href="ham_technician_license.html">HAM technician license</a></li><li><mark><a href="low_energy_computing.html">Low-energy computing</a></mark></li><li><a href="lua.html">Lua</a></li><li><a href="python.html">Python</a></li><li><a href="tools.html">Tools</a></li><details><summary></summary><li><a href="file_formats.html">file formats</a></li><li><a href="games_as_tools.html">games as tools</a></li></details></ul><ul></ul></nav></header><main id="entry-body"><h1>Low-energy computing</h1>
+<p>Links:</p>
+<ul>
+    <li><a href="https://branch.climateaction.tech/issues/issue-5/introducing-carbon-computing/">Introducing Carbon Computing - Branch</a></li>
+    <li><a href="https://www.thegreenwebfoundation.org/">Home - The Green Web Foundation</a></li>
+    <li><a href="https://sustainablewebdesign.org/calculating-digital-emissions/">Calculating Digital Emissions - Sustainable Web Design</a></li>
+    <li><a href="https://markmcgranaghan.com/cloudfront-analytics">CloudFront Analytics</a></li>
+</ul>
+
+<h2>Eleventy + JS Islands</h2>
+<ul>
+    <li><a href="https://github.com/11ty/eleventy/discussions/2506">A way to load a script for single page? · 11ty/eleventy · Discussion #2506 · GitHub</a>
+    <h2>compiling vs rendering</h2>
+    Javascript is necessary for post-render interactivity beyond what the browser can support with native features (which, you should refresh yourself on; there's quite a lot!). But right now, we use JS to not just provide the interactivity, but to render the structure, content and style of the page itself. There are many cases where this is necessary, but many more where it does not - a good portion of this client-side rendering is simply rendering the same, static page for all users. It begs the question - why?</li>
+</ul>
+
+<p>Let's consider two identical pages, full of rich, styled content and limited interactivity. Think a new site, a blog, or a website of documentation.</p>
+<ol>
+    <li>If the website is rendered using a javascript framework, either server-side rendered or on the client, a file (or files) are transferred to the viewer upon view, and code is executed to create the page. The browser then parses and displays the page to the viewer.</li>
+    <li>If the website is static files, the website is either written or built (for example by a static site generator) every time the website changes, but when a viewer visits the page, a file is transferred that the browser can parse and display directly.</li>
+</ol>
+
+<p>If that same page is updated 100 times across the day (let's use the news website homepage example - they're publishing articles throughout the day ), and daily readership is 1M, in example 1, the website is "built" 1M times. In example (2), the website is built 100 times.</p>
+</main><p style="color:#ccc"><em>Compiled 2024-4-8</em></p></div><footer>
+  <div class='footer-row'>
+    <a href="feed.rss">
+      RSS
+    </a>
+    <a href="https://github.com/mrshll">
+      <img src="media/github.png" style="height: 2rem">
+    </a>
+    <a href="https://webring.xxiivv.com/#random">
+      <img src="https://webring.xxiivv.com/icon.black.svg" style="height: 2rem">
+    </a>
+    <div id='low-tech-webring'>
+      <img src="media/lowtechwebring.png" style="height: 2rem; padding-bottom: .2rem">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://the-system.eu.org/">←</a>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://the-system.eu.org/">The System</a>
+            </td>
+            <td style="text-align:center;">
+              <span style="font-size:small;">
+                <a href="https://emreed.net/LowTech_Directory.html">
+                  <img width="80" src="https://emreed.net/LTW.bmp">
+                </a>
+              </span>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://whoishohokam.com/">Peter's Tech Project Page</a>
+            </td>
+            <td>
+              <a href="https://whoishohokam.com/">→</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <span>Marshall Moutenot © 2023</span>
+  </div>
+
+  <div id='lightswitch'>
+    <input type='checkbox' id='lightswitch-input' />
+    <label for='lightswitch-input'></label>
+  </div>
+
+  <script>
+    const toggleSwitch = document.querySelector('#lightswitch input');
+    toggleSwitch.addEventListener('change', e => {
+      const theme = e.target.checked ? 'dark' : 'light';
+      localStorage.setItem('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', theme)
+    });
+    const theme = localStorage.getItem('data-theme') || 'dark';
+    document.querySelector('#lightswitch input').checked = theme == 'dark';
+    document.documentElement.setAttribute('data-theme', theme)
+  </script>
+
+</footer>
+</body></html>

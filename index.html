@@ -1,0 +1,101 @@
+<!doctype html><html><head>
+  <meta name="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="author" content="Marshall Moutenot">
+  <meta name="keywords" content="Marshall Moutenot, mrshll, upstream tech, climate tech" />
+  <meta name="license" content="name=BY-NC-SA(4.0), url=https://creativecommons.org/licenses/by-nc-sa/4.0/" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://mastodon.social/@mrshll" rel="me">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="mrshll.com" />
+  <link rel="stylesheet" type="text/css" href="./links/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./links/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="./links/main.css">
+  <title>mrshll.com - mrshll.com</title>
+</head>
+<body><div class="content"><header><nav><ul><li><mark><a href="index.html">mrshll.com</a></mark></li></ul><ul><li><a href="About.html">About</a></li><li><a href="Log.html">Log</a></li><li><a href="Projects.html">Projects</a></li><li><a href="Wiki.html">Wiki</a></li><li><a href="Writing.html">Writing</a></li></ul></nav></header><main id="entry-body"><h1>mrshll.com</h1>
+<p><figure><a href="media/alej-1.png"><img loading="lazy" src="media/alej-1-720.png" alt=""/></a><figcaption></figcaption></figure></p>
+
+<p>Welcome to <a href="mmx.html">{mmx}</a>, the place I log ephemera, write, and store notes. You can learn <a href="About.html">{about who I am}</a> or feel free to wander.</p>
+
+<hr/>
+<h2>Recently</h2>
+<ul>
+    <li>Check out the <a href="Log.html">{Log}</a> and the <a href="Reading log.html">{Reading log}</a> for small updates (now also delivered via the <a href="https://kiosk.nightfall.city/">Neon Kiosk</a>)</li>
+    <li>Globally, hottest - personally hardest - year on record: my <a href="new_year__24.html">{year in review}</a></li>
+</ul>
+
+<h2>Active projects</h2>
+<ul>
+    <li>Learning how to be an excellent parent</li>
+    <li>Staring into Meadow's eyes</li>
+    <li>Learning about meteorology</li>
+    <li>Shepherding <a href="upstream_tech.html">{Upstream Tech}</a> into it's <em>next phase</em> (ooh!)</li>
+</ul>
+
+<h2>Contact</h2>
+<ul>
+    <li>Email : <a href="mailto:m@mrshll.com">m@mrshll.com</a></li>
+    <li>Fediverse : <a href="https://mastodon.social/@mrshll">@mrshll@mastodon.social</a></li>
+</ul>
+
+</main><p style="color:#ccc"><em>Compiled 2024-4-8</em></p></div><footer>
+  <div class='footer-row'>
+    <a href="feed.rss">
+      RSS
+    </a>
+    <a href="https://github.com/mrshll">
+      <img src="media/github.png" style="height: 2rem">
+    </a>
+    <a href="https://webring.xxiivv.com/#random">
+      <img src="https://webring.xxiivv.com/icon.black.svg" style="height: 2rem">
+    </a>
+    <div id='low-tech-webring'>
+      <img src="media/lowtechwebring.png" style="height: 2rem; padding-bottom: .2rem">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://the-system.eu.org/">←</a>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://the-system.eu.org/">The System</a>
+            </td>
+            <td style="text-align:center;">
+              <span style="font-size:small;">
+                <a href="https://emreed.net/LowTech_Directory.html">
+                  <img width="80" src="https://emreed.net/LTW.bmp">
+                </a>
+              </span>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://whoishohokam.com/">Peter's Tech Project Page</a>
+            </td>
+            <td>
+              <a href="https://whoishohokam.com/">→</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <span>Marshall Moutenot © 2023</span>
+  </div>
+
+  <div id='lightswitch'>
+    <input type='checkbox' id='lightswitch-input' />
+    <label for='lightswitch-input'></label>
+  </div>
+
+  <script>
+    const toggleSwitch = document.querySelector('#lightswitch input');
+    toggleSwitch.addEventListener('change', e => {
+      const theme = e.target.checked ? 'dark' : 'light';
+      localStorage.setItem('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', theme)
+    });
+    const theme = localStorage.getItem('data-theme') || 'dark';
+    document.querySelector('#lightswitch input').checked = theme == 'dark';
+    document.documentElement.setAttribute('data-theme', theme)
+  </script>
+
+</footer>
+</body></html>

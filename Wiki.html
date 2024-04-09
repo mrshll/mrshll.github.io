@@ -1,0 +1,86 @@
+<!doctype html><html><head>
+  <meta name="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="author" content="Marshall Moutenot">
+  <meta name="keywords" content="Marshall Moutenot, mrshll, upstream tech, climate tech" />
+  <meta name="license" content="name=BY-NC-SA(4.0), url=https://creativecommons.org/licenses/by-nc-sa/4.0/" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://mastodon.social/@mrshll" rel="me">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Wiki" />
+  <link rel="stylesheet" type="text/css" href="./links/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./links/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="./links/main.css">
+  <title>mrshll.com - Wiki</title>
+</head>
+<body><div class="content"><header><nav><ul><li><mark><a href="index.html">mrshll.com</a></mark></li></ul><ul><li><a href="About.html">About</a></li><li><a href="Log.html">Log</a></li><li><a href="Projects.html">Projects</a></li><li><mark><a href="Wiki.html">Wiki</a></mark></li><li><a href="Writing.html">Writing</a></li></ul><ul><li><a href="evergreen.html">evergreen</a></li><li><a href="fam.html">fam</a></li><li><a href="gizmos.html">gizmos</a></li><li><a href="home.html">home</a></li><li><a href="links.html">links</a></li><li><a href="meteorology.html">meteorology</a></li><details><summary></summary><li><a href="recipes.html">recipes</a></li><li><a href="to_consume.html">to consume</a></li><li><a href="toil.html">toil</a></li><li><a href="visuals.html">visuals</a></li></details></ul></nav></header><main id="entry-body"><h1>Wiki</h1>
+<p>The wiki is currently a scrapbook of notes, task lists, and resources. It's a subset of my local notes, with sensitive (and temporarily sensitive) material hidden.</p>
+
+<p>To help find your way around, here are places that have been interesting to me lately:</p>
+
+<ul>
+    <li><a href="meteorology.html">{meteorology}</a>: when time permits, I've been immersing myself in the history and art of weather forecasting, communities gathered around weather as information, and the creativity that goes into visualizing such multidimensional data.</li>
+    <li><a href="games_as_tools.html">{games as tools}</a>: most computer-y folks who have bothered to peek over the fence of their primary domain will agree that video games have long been, and continue to be, at the forefront of technological capability, whether it's an accurate representation of a landscape, simulation, or low-level performance. I think there's a potential for games as tools, or at least inspiration for the paradigm of utilitarian applications to shift from their current lifeless carcasses to something more engaging, vibrant, and dynamic.</li>
+    <li><a href="to_consume.html">{to consume}</a> is my living list of books/movies/games to check out.</li>
+    <li><a href="visuals.html">{visuals}</a> is a scrapbook of visuals I have found in some way engaging, inspiring.</li>
+</ul>
+</main><p style="color:#ccc"><em>Compiled 2024-4-8</em></p></div><footer>
+  <div class='footer-row'>
+    <a href="feed.rss">
+      RSS
+    </a>
+    <a href="https://github.com/mrshll">
+      <img src="media/github.png" style="height: 2rem">
+    </a>
+    <a href="https://webring.xxiivv.com/#random">
+      <img src="https://webring.xxiivv.com/icon.black.svg" style="height: 2rem">
+    </a>
+    <div id='low-tech-webring'>
+      <img src="media/lowtechwebring.png" style="height: 2rem; padding-bottom: .2rem">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://the-system.eu.org/">←</a>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://the-system.eu.org/">The System</a>
+            </td>
+            <td style="text-align:center;">
+              <span style="font-size:small;">
+                <a href="https://emreed.net/LowTech_Directory.html">
+                  <img width="80" src="https://emreed.net/LTW.bmp">
+                </a>
+              </span>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://whoishohokam.com/">Peter's Tech Project Page</a>
+            </td>
+            <td>
+              <a href="https://whoishohokam.com/">→</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <span>Marshall Moutenot © 2023</span>
+  </div>
+
+  <div id='lightswitch'>
+    <input type='checkbox' id='lightswitch-input' />
+    <label for='lightswitch-input'></label>
+  </div>
+
+  <script>
+    const toggleSwitch = document.querySelector('#lightswitch input');
+    toggleSwitch.addEventListener('change', e => {
+      const theme = e.target.checked ? 'dark' : 'light';
+      localStorage.setItem('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', theme)
+    });
+    const theme = localStorage.getItem('data-theme') || 'dark';
+    document.querySelector('#lightswitch input').checked = theme == 'dark';
+    document.documentElement.setAttribute('data-theme', theme)
+  </script>
+
+</footer>
+</body></html>

@@ -1,0 +1,85 @@
+<!doctype html><html><head>
+  <meta name="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="author" content="Marshall Moutenot">
+  <meta name="keywords" content="Marshall Moutenot, mrshll, upstream tech, climate tech" />
+  <meta name="license" content="name=BY-NC-SA(4.0), url=https://creativecommons.org/licenses/by-nc-sa/4.0/" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://mastodon.social/@mrshll" rel="me">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About" />
+  <link rel="stylesheet" type="text/css" href="./links/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./links/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="./links/main.css">
+  <title>mrshll.com - About</title>
+</head>
+<body><div class="content"><header><nav><ul><li><mark><a href="index.html">mrshll.com</a></mark></li></ul><ul><li><mark><a href="About.html">About</a></mark></li><li><a href="Log.html">Log</a></li><li><a href="Projects.html">Projects</a></li><li><a href="Wiki.html">Wiki</a></li><li><a href="Writing.html">Writing</a></li></ul><ul><li><a href="work_and_pursuits_of_toil.html">Work and Pursuits of Toil</a></li></ul></nav></header><main id="entry-body"><h1>About</h1>
+<p>You can call me Marsh or Marshall. I was born in Hoboken, raised in Nashville, and live just north of Boston. I'm married to (the amazing) Alejandra and parent of Meadow (human) and Daxter (pup).</p>
+
+<p><figure><a href="media/2021_09_26-1.png"><img loading="lazy" src="media/2021_09_26-1-720.png" alt="Low tide at Nahant Beach. Me throwing a ball up into the air and Dax bracing to chase."/></a><figcaption>Low tide at Nahant Beach. Me throwing a ball up into the air and Dax bracing to chase.</figcaption></figure></p>
+
+<p>I started and now run a climate and conservation company, <a href="upstream_tech.html">{Upstream Tech}</a> (see <a href="work_and_pursuits_of_toil.html">{Work and Pursuits of Toil}</a> for a ... complete history). I love programming languages and design challenges. I'm also good at building high-performing teams, building a viable business, and (I'm told) management. I currently do a lot of the latter (the company leadership thing) and not as much of the former (programming languages - argh!).</p>
+
+<p>I run and climb. Make <a href="music.html">{music}</a>, <a href="garden.html">{garden}</a>, and play games with my childhood friends (my BG3 character is a bard named Goose Goose, if you were wondering, and she's awesome). </p>
+
+<p>I like turning everyday things into an adventure, like a commute to work with <a href="early_werms.html">{Early Werms}</a> or <a href="2023_09_15.html">{walking up a river}</a>. I try to run a slow, unplanned, solo marathon once a year. I once reviewed milk on <a href="milk_advocate.html">{Milk Advocate}</a> with my friend Quinault (and then became almost vegan, now undone because of baby!).</p>
+</main><p style="color:#ccc"><em>Compiled 2024-4-8</em></p></div><footer>
+  <div class='footer-row'>
+    <a href="feed.rss">
+      RSS
+    </a>
+    <a href="https://github.com/mrshll">
+      <img src="media/github.png" style="height: 2rem">
+    </a>
+    <a href="https://webring.xxiivv.com/#random">
+      <img src="https://webring.xxiivv.com/icon.black.svg" style="height: 2rem">
+    </a>
+    <div id='low-tech-webring'>
+      <img src="media/lowtechwebring.png" style="height: 2rem; padding-bottom: .2rem">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://the-system.eu.org/">←</a>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://the-system.eu.org/">The System</a>
+            </td>
+            <td style="text-align:center;">
+              <span style="font-size:small;">
+                <a href="https://emreed.net/LowTech_Directory.html">
+                  <img width="80" src="https://emreed.net/LTW.bmp">
+                </a>
+              </span>
+            </td>
+            <td style="text-align:center;">
+              <a href="https://whoishohokam.com/">Peter's Tech Project Page</a>
+            </td>
+            <td>
+              <a href="https://whoishohokam.com/">→</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <span>Marshall Moutenot © 2023</span>
+  </div>
+
+  <div id='lightswitch'>
+    <input type='checkbox' id='lightswitch-input' />
+    <label for='lightswitch-input'></label>
+  </div>
+
+  <script>
+    const toggleSwitch = document.querySelector('#lightswitch input');
+    toggleSwitch.addEventListener('change', e => {
+      const theme = e.target.checked ? 'dark' : 'light';
+      localStorage.setItem('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', theme)
+    });
+    const theme = localStorage.getItem('data-theme') || 'dark';
+    document.querySelector('#lightswitch input').checked = theme == 'dark';
+    document.documentElement.setAttribute('data-theme', theme)
+  </script>
+
+</footer>
+</body></html>
