@@ -144,7 +144,7 @@ li.sublist-container::marker {
 
 footer {
   padding: 0 4.6rem;
-  max-width: 720px;
+  max-width: 624px;
   position: relative;
 }
 
@@ -203,7 +203,7 @@ dl dd, details {
 }
 
 .content {
-  max-width: 720px;
+  max-width: 624px;
   padding: 2rem 4.6rem;
   font-size: 1.4rem;
   position: relative;
