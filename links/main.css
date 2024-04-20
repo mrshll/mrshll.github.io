@@ -18,8 +18,7 @@
 }
 
 body {
-  font-family: monospace;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--text-color);
   background-color: var(--bg-color);
   font-weight: 400;
@@ -76,7 +75,7 @@ header {
 }
 
 nav {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   display: flex;
   overflow-x: auto;
 }
@@ -171,6 +170,7 @@ figcaption {
   background-color: var(--bg-contrast-color);
   padding: .2rem;
   text-align: center;
+  text-wrap: balance;
 }
 
 code, blockquote cite {
@@ -184,7 +184,7 @@ footer .footer-row > *{
   margin-right: 1rem;
   margin-bottom: 3rem;
   vertical-align: middle;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 [data-theme='dark'] footer img {
@@ -205,7 +205,7 @@ dl dd, details {
 .content {
   max-width: 624px;
   padding: 2rem 4.6rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   position: relative;
 }
 
@@ -296,6 +296,21 @@ main details[open] summary {
 
 #lightswitch input:checked + label:after {
   content: '🕯️'
+}
+
+article {
+  border: 1px solid black;
+  padding: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+article h2 {
+  display: inline;
+}
+
+article h2+a {
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 1000px) {
