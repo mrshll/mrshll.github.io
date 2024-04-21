@@ -36,7 +36,7 @@
       "author": { "@type": "Person", "name": "Marshall Moutenot" }
     }
   </script>
-  <link rel="stylesheet" href="./highlight.min.css" />
+  <!-- highlight.js styles embedded in main.css -->
   <script src="./highlight.min.js"></script>
   <script>
     hljs.highlightAll();
@@ -77,8 +77,7 @@
 
 <p>By creating a Dynamic DNS record, Google Domains provides credentials that can then be used with their API to update the IP. So, on {zombiebox}, I patched together the following script:</p>
 
-<pre><code>
-!/bin/sh
+<pre><code>!/bin/sh
 
 HOSTNAME=""
 USERNAME=""
@@ -128,15 +127,12 @@ if [ "$PUBLIC_IP" != "$DDNS_IP" ]; then
       echo "`date`: $RESP" &gt;&gt; ${LOG_FILE}
   esac
 fi
-
-</code></pre>
+</code><div class='lang'>bash</pre>
 
 <p>And I added a cronjob to run it regularly with <code>crontab -e</code>:</p>
 
-<pre><code>
-*/15 * * * * ~/apps/update-google-dyndns.sh
-
-</code></pre>
+<pre><code>*/15 * * * * ~/apps/update-google-dyndns.sh
+</code><div class='lang'>bash</pre>
 
 <p>That script will let Google Domains know what your IP is.</p>
 
@@ -144,8 +140,7 @@ fi
 
 <p>To test without a browser you can run the following, noting the <em>ANSWER SECTION</em>:</p>
 
-<pre><code>
-~&gt; dig werm.world
+<pre><code>~&gt; dig werm.world
 
 ; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; werm.world
 ;; global options: +cmd
@@ -165,8 +160,7 @@ werm.world.     60  IN  A   72.93.97.128
 ;; SERVER: 192.168.1.1#53(192.168.1.1)
 ;; WHEN: Sat Dec 17 12:51:48 EST 2022
 ;; MSG SIZE  rcvd: 55
-
-</code></pre>
+</code><div class='lang'>bash</pre>
 
 <h2>2 + 3: Getting requests from the internet to the basement</h2>
 
@@ -179,11 +173,9 @@ werm.world.     60  IN  A   72.93.97.128
 
 <p>If fiddling with your router is new to you, you must first find its address and log in to it's management application. For me, the router's address is 192.168.1.1, but it differs vendor to vendor. To check, you can look at your operating system's network settings for a "router" entry. Or, you can run the following while connected to the network:</p>
 
-<pre><code>
-~&gt; netstat -nr | grep default
+<pre><code>~&gt; netstat -nr | grep default
 default            192.168.1.1        UGScg             en0
-
-</code></pre>
+</code><div class='lang'>bash</pre>
 
 <p>A router's management application will have username/password authentication which is either set to a vendor default or noted physically on the router.</p>
 

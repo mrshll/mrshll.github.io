@@ -36,7 +36,7 @@
       "author": { "@type": "Person", "name": "Marshall Moutenot" }
     }
   </script>
-  <link rel="stylesheet" href="./highlight.min.css" />
+  <!-- highlight.js styles embedded in main.css -->
   <script src="./highlight.min.js"></script>
   <script>
     hljs.highlightAll();
@@ -83,11 +83,9 @@
 
 <p>Small note: I fixed something that had bothered me on the site for a while. When images were an aspect ratio that didn't fit the page's content width and the alt text/caption were long, I'd end up with a large black area. To fix, I had to add the following style:</p>
 
-<pre><code>
-figure { display: table }
+<pre><code>figure { display: table }
 figcaption { display: table-caption; caption-side: bottom; }
-
-</code></pre>
+</code><div class='lang'>css</pre>
 
 <p>Which gave me the visual result I wanted - where the <code>img</code> sets the width for the whole <code>figure</code> and <code>figcaption</code>.</p>
 </article></p>

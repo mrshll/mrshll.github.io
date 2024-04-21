@@ -36,7 +36,7 @@
       "author": { "@type": "Person", "name": "Marshall Moutenot" }
     }
   </script>
-  <link rel="stylesheet" href="./highlight.min.css" />
+  <!-- highlight.js styles embedded in main.css -->
   <script src="./highlight.min.js"></script>
   <script>
     hljs.highlightAll();
@@ -88,42 +88,30 @@
 
 <h3>ffmpeg</h3>
 <p>Create animated gif from screen area</p>
-<pre><code>
-ffmpeg -framerate 25 -f x11grab (slop -f '-video_size %wx%h -i :0.0+%x,%y' | string split ' ') ~/Videos/capture_(date -Iminutes).mkv
-
-</code></pre>
+<pre><code>ffmpeg -framerate 25 -f x11grab (slop -f '-video_size %wx%h -i :0.0+%x,%y' | string split ' ') ~/Videos/capture_(date -Iminutes).mkv
+</code><div class='lang'>bash</pre>
 <h2>Scripts</h2>
 
 <h3>Find and replace using sed across all occurrances in a folder</h3>
-<pre><code>
-find . -type f -exec sed -i.txt "s/foo/bar/g" {} \;
-
-</code></pre>
+<pre><code>find . -type f -exec sed -i.txt "s/foo/bar/g" {} \;
+</code><div class='lang'>bash</pre>
 <h3>Rename file extension</h3>
-<pre><code>
-!#/bin/bash
+<pre><code>!#/bin/bash
 for f in *.JPG;
   do mv -- "$f" "${f%.JPG}.jpg";
 done
-
-</code></pre>
+</code><div class='lang'>bash</pre>
 <h2>Get paste-able filename list (used for {log} entries)</h2>
-<pre><code>
-ls -1 2021-08-*
-
-</code></pre>
+<pre><code>ls -1 2021-08-*
+</code><div class='lang'>bash</pre>
 <h3>Migrating from .mmx to .mx</h3>
 <p>Images</p>
-<pre><code>
-find . -type f -name "*.md" -exec gsed --regexp-extended -i.bak "s/\!!![](](([^]((\S*)()]*))?\)/!![)(\3)(\1)/g" {} \;
-
-</code></pre>
+<pre><code>find . -type f -name "*.md" -exec gsed --regexp-extended -i.bak "s/\!!![](](([^]((\S*)()]*))?\)/!![)(\3)(\1)/g" {} \;
+</code><div class='lang'>bash</pre>
 
 <p>Links</p>
-<pre><code>
-find . -type f -name "*.md" -exec gsed --regexp-extended -i.bak "s/\{(\S*), (!!![](]()(^\})*)\}/[\2)(\1)/g" {} \;
-
-</code></pre>
+<pre><code>find . -type f -name "*.md" -exec gsed --regexp-extended -i.bak "s/\{(\S*), (!!![](]()(^\})*)\}/[\2)(\1)/g" {} \;
+</code><div class='lang'>bash</pre>
 </main><p style="color:#ccc"><em>Compiled 2024-04-20</em></p></div><footer>
   <div class="footer-row">
     <a href="feed.rss"> RSS </a>

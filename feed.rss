@@ -506,10 +506,8 @@ Since we've been listening to so much Ghibli soundtrack music we re-watched <str
 
 <p>By default, when you ssh into your home server, it will prompt you to enter the password. What the setup guide suggests here is to disable this and restrict ssh access to an allowlist of authorized keys. On each of the computers you will use to manage the server over ssh, run the following to copy your ssh public key:</p>
 
-<pre><code>
-~&gt; ssh-copy-id marsh@zombiebox.local
-
-</code></pre>
+<pre><code>~&gt; ssh-copy-id marsh@zombiebox.local
+</code><div class='lang'>bash</pre>
 
 <p>where <code>marsh</code> and <code>zombiebox.local</code> are replaced with the server user and hostname or ip respectively.</p>
 
@@ -527,18 +525,14 @@ Since we've been listening to so much Ghibli soundtrack music we re-watched <str
 
 <p>Additionally, the mastodon nginx configuration that they provide to copy into your server's <code>/etc/nginx/sites-available/mastodon</code> was invalid without the cert, and their recommended method, <code>certbot</code> wouldn't run because of the invalid nginx, a Catch-22 of sorts. Instead, I ran the following to create my SSL certificate:</p>
 
-<pre><code>
-letsencrypt certonly --standalone -d werm.world
-
-</code></pre>
+<pre><code>letsencrypt certonly --standalone -d werm.world
+</code><div class='lang'>bash</pre>
 
 <p>Under the root user, I added the following cronjobs (using <code>crontab -e</code>) to make sure the cert stayed up-to-date:</p>
 
-<pre><code>
-0 1 * * 1 /usr/bin/letsencrypt renew &gt;&gt; /home/mastodon/letsencrypt.log
+<pre><code>0 1 * * 1 /usr/bin/letsencrypt renew &gt;&gt; /home/mastodon/letsencrypt.log
 5 1 * * 1 /bin/systemctl reload nginx
-
-</code></pre>
+</code><div class='lang'>bash</pre>
 
 <p>Finishing the guide, everything worked except css and js assets were not being served. After a bit of digging, I found <a href="https://github.com/mastodon/mastodon/issues/3584">this issue</a> and changed the permissions of the <code>mastodon</code> user's home directory per the issue.</p>
 
@@ -562,8 +556,7 @@ letsencrypt certonly --standalone -d werm.world
 
 <p>I created the following <code>backup.sh</code> script to periodically back up the important bits, including postgres, redis, and media/static files.</p>
 
-<pre><code>
-!/bin/bash
+<pre><code>!/bin/bash
 
 NOW=$(date --iso-8601=seconds)
 HOST=marshbox.local
@@ -595,15 +588,12 @@ if ping -c 1 -W 1 "$HOST"; then
 else
   echo "$HOST not online, skipping backup"
 fi
-
-</code></pre>
+</code><div class='lang'>bash</pre>
 
 <p>For this file in particular, I wanted to make sure it ran, so I tried <a href="https://healthchecks.io/">healthchecks.io</a> for the first time and added the following cronjob for the root user:</p>
 
-<pre><code>
-0 3 * * * /home/mastodon/backup.sh &amp;&amp; curl -fsS -m 10 --retry 5 -o /dev/null https://hc-ping.com/{UUID}
-
-</code></pre>
+<pre><code>0 3 * * * /home/mastodon/backup.sh &amp;&amp; curl -fsS -m 10 --retry 5 -o /dev/null https://hc-ping.com/{UUID}
+</code><div class='lang'>bash</pre>
 
 <p><img src="mastodon-healthcheck.png" alt="Screenshot of healthcheck.io showing my cronjob"/></p>
 
@@ -641,8 +631,7 @@ fi
 
 <p>By creating a Dynamic DNS record, Google Domains provides credentials that can then be used with their API to update the IP. So, on {zombiebox}, I patched together the following script:</p>
 
-<pre><code>
-!/bin/sh
+<pre><code>!/bin/sh
 
 HOSTNAME=""
 USERNAME=""
@@ -692,15 +681,12 @@ if [ "$PUBLIC_IP" != "$DDNS_IP" ]; then
       echo "`date`: $RESP" &gt;&gt; ${LOG_FILE}
   esac
 fi
-
-</code></pre>
+</code><div class='lang'>bash</pre>
 
 <p>And I added a cronjob to run it regularly with <code>crontab -e</code>:</p>
 
-<pre><code>
-*/15 * * * * ~/apps/update-google-dyndns.sh
-
-</code></pre>
+<pre><code>*/15 * * * * ~/apps/update-google-dyndns.sh
+</code><div class='lang'>bash</pre>
 
 <p>That script will let Google Domains know what your IP is.</p>
 
@@ -708,8 +694,7 @@ fi
 
 <p>To test without a browser you can run the following, noting the <em>ANSWER SECTION</em>:</p>
 
-<pre><code>
-~&gt; dig werm.world
+<pre><code>~&gt; dig werm.world
 
 ; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; werm.world
 ;; global options: +cmd
@@ -729,8 +714,7 @@ werm.world.     60  IN  A   72.93.97.128
 ;; SERVER: 192.168.1.1#53(192.168.1.1)
 ;; WHEN: Sat Dec 17 12:51:48 EST 2022
 ;; MSG SIZE  rcvd: 55
-
-</code></pre>
+</code><div class='lang'>bash</pre>
 
 <h2>2 + 3: Getting requests from the internet to the basement</h2>
 
@@ -743,11 +727,9 @@ werm.world.     60  IN  A   72.93.97.128
 
 <p>If fiddling with your router is new to you, you must first find its address and log in to it's management application. For me, the router's address is 192.168.1.1, but it differs vendor to vendor. To check, you can look at your operating system's network settings for a "router" entry. Or, you can run the following while connected to the network:</p>
 
-<pre><code>
-~&gt; netstat -nr | grep default
+<pre><code>~&gt; netstat -nr | grep default
 default            192.168.1.1        UGScg             en0
-
-</code></pre>
+</code><div class='lang'>bash</pre>
 
 <p>A router's management application will have username/password authentication which is either set to a vendor default or noted physically on the router.</p>
 
