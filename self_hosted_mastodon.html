@@ -36,6 +36,11 @@
       "author": { "@type": "Person", "name": "Marshall Moutenot" }
     }
   </script>
+  <link rel="stylesheet" href="./highlight.min.css" />
+  <script src="./highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
   <link
     href="https://mrshll.com/feed.rss"
     rel="alternate"
@@ -155,29 +160,29 @@ HOST_USER=marsh
 DEST_DIR=/data/zombiebox-backup/mastodon/$NOW/
 
 if ping -c 1 -W 1 "$HOST"; then
-echo "$HOST online, backing up"
+  echo "$HOST online, backing up"
 
-runuser -l mastodon -c 'cd /home/mastodon &amp;&amp; mkdir backup'
+  runuser -l mastodon -c 'cd /home/mastodon &amp;&amp; mkdir backup'
 
-# postgres
-runuser -l mastodon -c 'cd /home/mastodon &amp;&amp; pg_dump -Fc mastodon_production -f /home/mastodon/backup/postgres.dump'
+  # postgres
+  runuser -l mastodon -c 'cd /home/mastodon &amp;&amp; pg_dump -Fc mastodon_production -f /home/mastodon/backup/postgres.dump'
 
-# redis
-cp /var/lib/redis/dump.rdb /home/mastodon/backup/dump.rdb
+  # redis
+  cp /var/lib/redis/dump.rdb /home/mastodon/backup/dump.rdb
 
-tar_cmds="tar -czf backup/accounts.tar.gz live/public/system/accounts/ &amp;&amp; \
-tar -czf backup/media_attachments.tar.gz live/public/system/media_attachments/ &amp;&amp; \
-tar -czf backup/site_uploads.tar.gz live/public/system/site_uploads/"
+  tar_cmds="tar -czf backup/accounts.tar.gz live/public/system/accounts/ &amp;&amp; \
+  tar -czf backup/media_attachments.tar.gz live/public/system/media_attachments/ &amp;&amp; \
+  tar -czf backup/site_uploads.tar.gz live/public/system/site_uploads/"
 
-# uploads
-runuser -l mastodon -c "cd /home/mastodon &amp;&amp; $tar_cmds"
+  # uploads
+  runuser -l mastodon -c "cd /home/mastodon &amp;&amp; $tar_cmds"
 
-# ensure the destination directory and send 'er over
-ssh $HOST_USER@$HOST "mkdir -p $DEST_DIR"
-scp /home/mastodon/backup/* $HOST_USER@$HOST:$DEST_DIR
+  # ensure the destination directory and send 'er over
+  ssh $HOST_USER@$HOST "mkdir -p $DEST_DIR"
+  scp /home/mastodon/backup/* $HOST_USER@$HOST:$DEST_DIR
 
 else
-echo "$HOST not online, skipping backup"
+  echo "$HOST not online, skipping backup"
 fi
 
 </code></pre>

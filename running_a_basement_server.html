@@ -36,6 +36,11 @@
       "author": { "@type": "Person", "name": "Marshall Moutenot" }
     }
   </script>
+  <link rel="stylesheet" href="./highlight.min.css" />
+  <script src="./highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
   <link
     href="https://mrshll.com/feed.rss"
     rel="alternate"
@@ -90,38 +95,38 @@ DDNS_IP=$(echo ${LOG_IP_FILE})
 
 if [ "$PUBLIC_IP" != "$DDNS_IP" ]; then
 
-URL="https://domains.google.com/nic/update?hostname=${HOSTNAME}&amp;myip=${PUBLIC_IP}"
-RESP=$(curl -s -k --user "${USERNAME}:${PASSWORD}" "$URL")
+  URL="https://domains.google.com/nic/update?hostname=${HOSTNAME}&amp;myip=${PUBLIC_IP}"
+  RESP=$(curl -s -k --user "${USERNAME}:${PASSWORD}" "$URL")
 
-case $RESP in
-"good ${PUBLIC_IP}" | "nochg ${PUBLIC_IP}")
-  echo $PUBLIC_IP &gt; ${LOG_IP_FILE}
-  echo "`date`: ${HOSTNAME} successfully updated to ${PUBLIC_IP}." &gt;&gt; ${LOG_FILE}
-  ;;
-"nohost")
-  echo "`date`: The host ${HOSTNAME} does not exist, or does not have Dynamic DNS enabled." &gt;&gt; ${LOG_FILE}
-  ;;
-"badauth")
-  echo "`date`: The username / password combination is not valid for the host ${HOSTNAME}." &gt;&gt; ${LOG_FILE}
-  ;;
-"notfqdn")
-  echo "`date`: The supplied hostname ${HOSTNAME} is not a valid fully-qualified domain name." &gt;&gt; ${LOG_FILE}
-  exit
-  ;;
-"badagent")
-  echo "`date`: Your Dynamic DNS client is making bad requests. Ensure the user agent is set in the request." &gt;&gt; ${LOG_FILE}
-  exit
-  ;;
-"abuse")
-  echo "`date`: Dynamic DNS access for the hostname ${HOSTNAME} has been blocked." &gt;&gt; ${LOG_FILE}
-  exit
-  ;;
-"911")
-  echo "`date`: An error happened on Googles end." &gt;&gt; ${LOG_FILE}
-  ;;
-*)
-  echo "`date`: $RESP" &gt;&gt; ${LOG_FILE}
-esac
+  case $RESP in
+    "good ${PUBLIC_IP}" | "nochg ${PUBLIC_IP}")
+      echo $PUBLIC_IP &gt; ${LOG_IP_FILE}
+      echo "`date`: ${HOSTNAME} successfully updated to ${PUBLIC_IP}." &gt;&gt; ${LOG_FILE}
+      ;;
+    "nohost")
+      echo "`date`: The host ${HOSTNAME} does not exist, or does not have Dynamic DNS enabled." &gt;&gt; ${LOG_FILE}
+      ;;
+    "badauth")
+      echo "`date`: The username / password combination is not valid for the host ${HOSTNAME}." &gt;&gt; ${LOG_FILE}
+      ;;
+    "notfqdn")
+      echo "`date`: The supplied hostname ${HOSTNAME} is not a valid fully-qualified domain name." &gt;&gt; ${LOG_FILE}
+      exit
+      ;;
+    "badagent")
+      echo "`date`: Your Dynamic DNS client is making bad requests. Ensure the user agent is set in the request." &gt;&gt; ${LOG_FILE}
+      exit
+      ;;
+    "abuse")
+      echo "`date`: Dynamic DNS access for the hostname ${HOSTNAME} has been blocked." &gt;&gt; ${LOG_FILE}
+      exit
+      ;;
+    "911")
+      echo "`date`: An error happened on Googles end." &gt;&gt; ${LOG_FILE}
+      ;;
+    *)
+      echo "`date`: $RESP" &gt;&gt; ${LOG_FILE}
+  esac
 fi
 
 </code></pre>
@@ -174,17 +179,19 @@ werm.world.     60  IN  A   72.93.97.128
 
 <p>If fiddling with your router is new to you, you must first find its address and log in to it's management application. For me, the router's address is 192.168.1.1, but it differs vendor to vendor. To check, you can look at your operating system's network settings for a "router" entry. Or, you can run the following while connected to the network:</p>
 
-<pre><code>~&gt; netstat -nr | grep default
+<pre><code>
+~&gt; netstat -nr | grep default
 default            192.168.1.1        UGScg             en0
 
-A router's management application will have username/password authentication which is either set to a vendor default or noted physically on the router.
-
-Look for DNS settings, often hidden under an "Advanced" veil. There, you can set the server's hostname (in my case "zombiebox.local") to be assigned a specific _local_. With a consistent _local_ IP, the router can be configured to forward requests made to your _external_ IP of a certain port (i.e. 443) to the server's _local_ IP. To do this, look for "Port Forwarding" and select the server's IP as well as the port (in a webserver's case, 443 and/or 80).
-
-It's dependent on what you are hosting, but from there you can use something like nginx running on the server to route requests to the correct process depending on the domain/request.
-
-Proper security of a home network server is beyond the scope of this humble post, but in short forward the smallest set of ports possible for your server to function on the internet, and follow any application-specific guides closely on best practices for securely running the server.
 </code></pre>
+
+<p>A router's management application will have username/password authentication which is either set to a vendor default or noted physically on the router.</p>
+
+<p>Look for DNS settings, often hidden under an "Advanced" veil. There, you can set the server's hostname (in my case "zombiebox.local") to be assigned a specific <em>local</em>. With a consistent <em>local</em> IP, the router can be configured to forward requests made to your <em>external</em> IP of a certain port (i.e. 443) to the server's <em>local</em> IP. To do this, look for "Port Forwarding" and select the server's IP as well as the port (in a webserver's case, 443 and/or 80).</p>
+
+<p>It's dependent on what you are hosting, but from there you can use something like nginx running on the server to route requests to the correct process depending on the domain/request.</p>
+
+<p>Proper security of a home network server is beyond the scope of this humble post, but in short forward the smallest set of ports possible for your server to function on the internet, and follow any application-specific guides closely on best practices for securely running the server.</p>
 
 </main><p style="color:#ccc"><em>Compiled 2024-04-20</em></p></div><footer>
   <div class="footer-row">

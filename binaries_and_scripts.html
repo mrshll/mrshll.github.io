@@ -36,6 +36,11 @@
       "author": { "@type": "Person", "name": "Marshall Moutenot" }
     }
   </script>
+  <link rel="stylesheet" href="./highlight.min.css" />
+  <script src="./highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
   <link
     href="https://mrshll.com/feed.rss"
     rel="alternate"
@@ -98,7 +103,7 @@ find . -type f -exec sed -i.txt "s/foo/bar/g" {} \;
 <pre><code>
 !#/bin/bash
 for f in *.JPG;
-do mv -- "$f" "${f%.JPG}.jpg";
+  do mv -- "$f" "${f%.JPG}.jpg";
 done
 
 </code></pre>
