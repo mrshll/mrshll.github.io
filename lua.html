@@ -36,7 +36,7 @@
       "author": { "@type": "Person", "name": "Marshall Moutenot" }
     }
   </script>
-  <!-- highlight.js styles embedded in main.css -->
+  <link rel="stylesheet" href="./highlight.min.css" />
   <script src="./highlight.min.js"></script>
   <script>
     hljs.highlightAll();
@@ -60,7 +60,8 @@
 
 <p>Create an iterator</p>
 
-<pre><code>function utils.spairs(t, order)
+<pre><code>
+function utils.spairs(t, order)
   -- collect the keys
   local keys = {}
   for k in pairs(t) do keys[#keys + 1] = k end
@@ -82,10 +83,12 @@
     end
   end
 end
-</code><div class='lang'>lua</pre>
+
+</code></pre>
 
 <p>Example usage (from <a href="mmx.html">{mmx}</a>):</p>
-<pre><code>local function make_sorted_entry_iterator(entries)
+<pre><code>
+local function make_sorted_entry_iterator(entries)
   return utils.spairs(entries, function(es, name_a, name_b)
     local entry_a = es![](name_a)
     local entry_b = es![](name_b)
@@ -96,10 +99,12 @@ end
     end
   end)
 end
-</code><div class='lang'>lua</pre>
+
+</code></pre>
 
 <h2>utils.lua</h2>
-<pre><code>local utils = {}
+<pre><code>
+local utils = {}
 
 -- file io
 function utils.file_exists(path)
@@ -288,8 +293,9 @@ function utils.rss_date(date_str)
 end
 
 return utils
-</code><div class='lang'>lua</pre>
-</main><p style="color:#ccc"><em>Compiled 2024-04-20</em></p></div><footer>
+
+</code></pre>
+</main><p style="color:#ccc"><em>Compiled 2024-04-21</em></p></div><footer>
   <div class="footer-row">
     <a href="feed.rss"> RSS </a>
     <a href="https://github.com/mrshll">

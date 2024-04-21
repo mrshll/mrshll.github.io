@@ -36,7 +36,7 @@
       "author": { "@type": "Person", "name": "Marshall Moutenot" }
     }
   </script>
-  <!-- highlight.js styles embedded in main.css -->
+  <link rel="stylesheet" href="./highlight.min.css" />
   <script src="./highlight.min.js"></script>
   <script>
     hljs.highlightAll();
@@ -88,12 +88,14 @@
 
 <p>Other features of established web frameworks are replicatable with bash, usually. For instance, "live reloading" is achieved with the following bash:</p>
 
-<pre><code>!/bin/sh
+<pre><code>
+!/bin/sh
 bash build.sh
 while inotifywait -qqre modify ./src ./links ./data; do
   bash build.sh
 done
-</code><div class='lang'>bash</pre>
+
+</code></pre>
 
 <p>The site is hosted using Github pages. This is great, because there is no build step. I check in the built html files (in /doc) and they are served within seconds. CNAME setup was a breeze.</p>
 
@@ -117,7 +119,7 @@ done
 
 <p><em>Learning the Name by Ursula K. Le Guin</em></p>
 
-</main><p style="color:#ccc"><em>Compiled 2024-04-20</em></p></div><footer>
+</main><p style="color:#ccc"><em>Compiled 2024-04-21</em></p></div><footer>
   <div class="footer-row">
     <a href="feed.rss"> RSS </a>
     <a href="https://github.com/mrshll">
