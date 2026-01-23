@@ -9,9 +9,9 @@
       rel="self"
       type="application/rss+xml" />
     <description><![CDATA[ The feed of updates for mrshll.com ]]></description> <item>
-  <title><![CDATA[ Reviewing 2025 ]]></title>
-  <link>https://mrshll.com/reviewing_2025.html</link>
-  <guid>https://mrshll.com/reviewing_2025.html</guid>
+  <title><![CDATA[ 2026-01-20 ]]></title>
+  <link>https://mrshll.com/2026_01_20.html</link>
+  <guid>https://mrshll.com/2026_01_20.html</guid>
   <pubDate>Tue, 20 Jan 2026 00:00:00 -0600
 </pubDate>
   <description><![CDATA[ 
@@ -92,7 +92,7 @@ boulder, however, wastes no time. </p>
 
 <p>Well, it's real now. We are moving to Nashville. I came to Boston in 2009 to study computer science and stayed for the career opportunities, loud and then quiet music scene (where I met Alejandra), and the wonderful friends we've made over the years.</p>
 
-<p>Becoming a parent has reinforced how important family proximity is. Last year [[New Year, 24|was a doozy]]. There were tough, tough moments, both from the challenge of Keep Baby Healthy and stress from my work. We have friends who would leap to help us here in Boston, but it's intangibly different. It feels like asking for a favor rather than something unconditional. I'll note how lucky we are to have a family like that. </p>
+<p>Becoming a parent has reinforced how important family proximity is. Last year [[2024-01-01|was a doozy]]. There were tough, tough moments, both from the challenge of Keep Baby Healthy and stress from my work. We have friends who would leap to help us here in Boston, but it's intangibly different. It feels like asking for a favor rather than something unconditional. I'll note how lucky we are to have a family like that. </p>
 
 <p>I spent the last week starting to prep the house for a move, packing the basement and de-cluttering. We put loads of free stuff out on the curb which was scooped up with alarming immediacy. My parents visited to hang with Meadow and help prep. It was a good week.</p>
 
@@ -130,9 +130,9 @@ Tomorrow is back to work, though. Woke last night to an onslaught of stressful w
  ]]></description>
 </item>
 <item>
-  <title><![CDATA[ New Year, 24 ]]></title>
-  <link>https://mrshll.com/new_year__24.html</link>
-  <guid>https://mrshll.com/new_year__24.html</guid>
+  <title><![CDATA[ 2024-01-01 ]]></title>
+  <link>https://mrshll.com/2024_01_01.html</link>
+  <guid>https://mrshll.com/2024_01_01.html</guid>
   <pubDate>Mon, 01 Jan 2024 00:00:00 -0600
 </pubDate>
   <description><![CDATA[ 
@@ -956,7 +956,7 @@ default            192.168.1.1        UGScg             en0
 <p>A friend from Nashville, Eli, was thinking about writing something about webrings and asked the following, paraphrased:</p>
 
 <p><em>Are webrings a recreation of a more user-controlled internet where information, creation, art, etc can be shared without mediation by corporate entities?</em>
-This seems to me a big component of it. I can't speak to the precise genesis of the various webrings I've encountered, but there are prevalent attitudes rejecting corporate ownership over internet presence in favor of {low tech}, right to repair, and longterm-ism. Through sites on the webring, I've discovered many other efforts to replace popular but corporate internet services with open source, federated, and/or peer-to-peer systems and technologies.</p>
+This seems to me a big component of it. I can't speak to the precise genesis of the various webrings I've encountered, but there are prevalent attitudes rejecting corporate ownership over internet presence in favor of low tech, right to repair, and building things that don't become obsolete. Through sites on the webring, I've discovered many other efforts to replace popular but corporate internet services with open source, federated, and/or peer-to-peer systems and technologies.</p>
 
 <p><em>Do webrings represent something more philosophical or nostalgic for you, or anyone you know?</em>
 I think there are two components to this:</p>
@@ -974,7 +974,7 @@ I think there are two components to this:</p>
     https://emreed.net/LowTech_Directory.html</p>
 </blockquote>
 
-<p>What has surprised and delighted me the most is the way some members of the webring interact with others - I now have digital pen pals that I've met via the rings. One person wrote a fantastic <a href="https://melonking.net/melon.html?z=/thoughts/tech-needs-art.html">response essay</a> to one of my posts from years ago. It creates a lightweight network without the hand-holding of a intermediary. It's cool!</p>
+<p>What has surprised and delighted me the most is the way some members of the webring interact with others - I now have digital pen pals that I've met via the rings. One person wrote a fantastic <a href="https://melonking.net/thoughts/tech-needs-art">response essay</a> to one of my posts from years ago. It creates a lightweight network without the hand-holding of a intermediary. It's cool!</p>
 
 <p>And two questions from Eli's editor:</p>
 
@@ -998,7 +998,7 @@ I know that people are becoming more conscious of their online presences being w
 
 <p>"Running is a celebration of life" Zaf Ahmed, my middle and highschool coach told us. Those words echo 18 years later on my long runs. And Zaf was right (I should tell him) - there is a purity in the physical act and mental state that together make running. I can't think of a better description than Zaf's: a celebration. I'm sure fellow runners will understand. There is quiet ecstasy lying in wait, and when it does you forget your legs, the strain, the heat and you can go forever.</p>
 
-<p>I joined the cross country in fifth grade because of a crush (so perhaps I owe it all to Taylor Hannasch). I remember showing up at coach Zaf's office. He peered over his small, low-seated glasses at my broken down converse and told me I'd need some proper running shoes. I never was particularly good. The canonical 5k XC race is brutal. But I've stuck with it ever since that day with only a few pauses. And most recently, I've found new facets of running that have renewed my enthusiasm and enjoyment.</p>
+<p>I joined the cross country in fifth grade because of a crush. I remember showing up at coach Zaf's office. He peered over his small, low-seated glasses at my broken down converse and told me I'd need some proper running shoes. I never was particularly good. The canonical 5k XC race is brutal. But I've stuck with it ever since that day with only a few pauses. And most recently, I've found new facets of running that have renewed my enthusiasm and enjoyment.</p>
 
 <h2>How I run</h2>
 
@@ -1008,9 +1008,9 @@ I know that people are becoming more conscious of their online presences being w
 
 <h2>Where I run</h2>
 
-<p>2 years ago, {Alejandra} and I moved to Medford near the {The Fells}. When we did, I started mostly running on trails. Trail running is unique in that you're often going over complex or difficult terrain, which forces adjustments of pace and form and work a wider range of muscles and stabilizers than road running. I realized pain I'd get at higher mileages wasn't happening - even though it felt like I was jumping over rocks and sprinting down twisty paths. I attribute that to this frequent modulation of pace and stride.</p>
+<p>While I was living in Medford, I started mostly running on trails. Trail running is unique in that you're often going over complex or difficult terrain, which forces adjustments of pace and form and work a wider range of muscles and stabilizers than road running. I realized pain I'd get at higher mileages wasn't happening - even though it felt like I was jumping over rocks and sprinting down twisty paths. I attribute that to this frequent modulation of pace and stride.</p>
 
-<p>Trail running also introduced me to the world of ultra-marathoning, which has exploded in popularity over the last decade. I found filmmaker Jamil Coury chronicling immense runs and checking in dozens of miles in, the air thin at high elevation, <a href="https://youtu.be/Kvjd9sEVv-k?t=1027">with an ear-to-ear smile describing how it had just started hailing and that it was so awesome man, what a blast</a>. This relentlessly positive attitude towards daunting physical challenges was infectious. It inspired me to turn runs into backyard adventures - runs {run to Salem, up the coastline to nearby towns}, {sunday marathon 2021, solo marathons through new neighborhoods}, and exploration of new trails in the forest. And while I've done a couple of organized races like the Fells Winter Ultra, I most enjoy solitary challenges.</p>
+<p>Trail running also introduced me to the world of ultra-marathoning, which has exploded in popularity over the last decade. I found filmmaker Jamil Coury chronicling immense runs and checking in dozens of miles in, the air thin at high elevation, <a href="https://youtu.be/Kvjd9sEVv-k?t=1027">with an ear-to-ear smile describing how it had just started hailing and that it was so awesome man, what a blast</a>. This relentlessly positive attitude towards daunting physical challenges was infectious. It inspired me to turn runs into backyard adventures - runs, solo marathons through new neighborhoods, and exploration of new trails in the forest. And while I've done a couple of organized races like the Fells Winter Ultra, I most enjoy solitary challenges.</p>
 
 
  ]]></description>
@@ -2070,9 +2070,7 @@ Love you both so much. xoxox</p>
 
 <p>I met Jason early on in his climate journey. Via Twitter I think? We exchanged a couple of thoughts online and then had a coffee. A few months later, he had his podcast up and running and I had been enjoying the episodes.</p>
 
-<p>I especially enjoyed the episode with <a href="https://www.myclimatejourney.co/episodes/pamela-templer">Pamela Templer</a> of Boston University. Her explanations were approachable and down to earth. The episode with <a href="https://www.myclimatejourney.co/episodes/pat-brown">Pat Brown</a> of Impossible Foods was unsurprisingly a favorite as well. Right now, I have a long backlog to catch up on.</p>
-
-<p>I wanted to discuss how we arrived at Upstream Tech, as unlikely contributors to climate change solutions, and how I think everyone can -- and many more people need to -- {an appeal for impact, play a role in implementing creative, urgent solutions}.</p>
+<p>I wanted to discuss how we arrived at Upstream Tech, as unlikely contributors to climate change solutions, and how I think everyone can -- and many more people need to -- [[An appeal for impact|play a role in implementing climate solutions]].</p>
 
 <p><a href="https://www.myclimatejourney.co/episodes/marshall-moutenot">My Climate Journey Episode 26</a></p>
 
